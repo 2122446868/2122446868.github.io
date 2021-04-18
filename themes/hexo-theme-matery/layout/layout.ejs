@@ -108,6 +108,16 @@
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.instantpage) %>" type="module"></script>
     <% } %>
 
+    <script type="text/javascript">
+        //只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+        }
+        </script>
+
+<!-- 添加鼠标彩虹星星掉落跟随效果 -->
+<script src="/js/cursor.js"></script>
 </body>
 
 </html>

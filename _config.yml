@@ -14,7 +14,8 @@ timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com
-permalink: :year/:month/:day/:title/
+# permalink: :year/:month/:day/:title/
+permalink: :year/:month:day:abbrlink.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -125,8 +126,8 @@ search:
   path: search.xml
   field: post
 
-wordCount:
-  enable: true # 将这个值设置为 true 即可.
-  postWordCount: true
-  min2read: true
-  totalCount: true
+
+# 文章链接转静态短地址
+abbrlink: 
+  alg: crc16 #算法选项：crc16丨crc32
+  rep: dec #输出进制：dec为十进制，hex为十六进制
